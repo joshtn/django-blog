@@ -10,7 +10,7 @@ from django.views.generic import (
 )
 from .models import Post
 
-# hemsidan112 joshtanja
+# hemsidan112joshteanja
 
 
 
@@ -80,4 +80,8 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 def about(request):
     return render(request, 'blog/about.html', {'title': 'About'})
+
+
+def latest(request):
+    return render(request, 'blog/latest.html', {'title': 'Latest Post'})
 
